@@ -1,1 +1,36 @@
-dsh-nemotron-ultra@0.2.1-rc.2 — DSH-native reference skill bundle.
+{
+  "name": "dsh-nemotron-ultra",
+  "version": "0.2.1-rc.2",
+  "description": "Research-grounded Nemotron 3 Ultra reference skill for DeepSeek Harness: architecture, NVFP4 training, SFT, RLVR/MOPD, MTP, quantization, inference, evaluation, and reproducibility limits.",
+  "license": "Apache-2.0",
+  "type": "module",
+  "main": "src/index.js",
+  "icon": "./assets/icon.svg",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mulqizamzam/dsh-nemotron-ultra.git"
+  },
+  "engines": {
+    "dsh": "0.2.1-rc.2"
+  },
+  "files": [
+    "src/index.js",
+    "cordis.patch.yml",
+    "assets/icon.svg",
+    "assets/nemotron-ultra/**",
+    "README.md",
+    "README.en.md",
+    "NOTICE.md",
+    "LICENSE",
+    "CHANGELOG.md"
+  ],
+  "scripts": {
+    "test": "node --test",
+    "validate": "python3 scripts/validate_port.py"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  }
+}
